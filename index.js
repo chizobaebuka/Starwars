@@ -4,7 +4,7 @@ fetch(url)
     return response.json()
   })
   .then(data => {
-    console.log(data)
+    // console.log(data)
     data.results.forEach(character => {
       let imagePath = `./assets/${character.name}.jpeg`;
       let characterName = `<li>${character.name}</li>`;
@@ -24,7 +24,7 @@ fetch(url)
       </div>`;
       document.querySelector('ul').insertAdjacentHTML('beforeend', buttonElement);
     })
-    console.log(data);
+    // console.log(data);
   })
   .catch(error => console.log(error));
 
